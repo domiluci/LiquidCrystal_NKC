@@ -1,0 +1,15 @@
+{
+  "name": "LiquidCrystal_NKC",
+  "keywords": "LCD, liquidcrystal, NKC, LCD, I2C, RS232, SPI",
+  "description": "A LiquidCrystal library for Longtech & NKC Electronics I2C/RS232/SPI LCD displays",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/domiluci/LiquidCrystal_NKC.git"
+  },
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr"
+  ]
+}
