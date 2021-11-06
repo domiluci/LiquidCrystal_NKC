@@ -1,31 +1,39 @@
-# LiquidCrystal NKC
+# LiquidCrystal NKC for Arduino IDE
 
-#### **Developed By [Dominic Luciano](https://www.github.com/domiluci)**
-
-Official repository of the **LiquidCrystal NKC** Arduino Library for [Longtech & NKC Electronics Serial LCD Modules](http://media.nkcelectronics.com/datasheet/LCM2004SD-NSA-FBW.pdf)
-
-This Arduino Library is Arduino IDE 2.0+ Compatible
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/domiluci/LiquidCrystal_NKC?label=Release&display_name=tag&include_prereleases)](https://github.com/domiluci/LiquidCrystal_NKC/releases)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![Arduino 2.0](https://img.shields.io/badge/Arduino%202.0-Ready-brightgreen)](https://www.arduino.cc/en/software#experimental-software)
+[![Donate](https://img.shields.io/badge/Donate-BTC-f7931a?logo=bitcoin)](https://i.ibb.co/QQ4hSnN/CA-BTC-DL.png)
+[![Donate](https://img.shields.io/badge/Donate-BCH-0ac18e?logo=bitcoincash)](https://i.ibb.co/DW9gXPN/BP-BCH-DL.png)
+[![Donate](https://img.shields.io/badge/Donate-LTC-a6a9aa?logo=litecoin)](https://i.ibb.co/G2y9GXh/BP-LTC-DL.png)
+[![Donate](https://img.shields.io/badge/Donate-ETH-434976?logo=ethereum)](https://i.ibb.co/wrbMGZN/BP-ETH-DL.png)
 
 ![Hello World Example](https://i.ibb.co/HYcRqPY/Hello-World-2.jpg)
 
 ## DESCRIPTION
 
-While not very mainstream, the [Longtech & NKC Electronics Serial LCD display module](http://media.nkcelectronics.com/datasheet/LCM2004SD-NSA-FBW.pdf) boasts a myriad of features over and above the generic **PCF8574** and **MCP23017** I2C backpacks typically used to simplify 4-bit & 8-bit LCD connections, such as the capability to command the display not just via I2C but also over RS232 (with just a single wire), as well as over an everyday SPI bus. This NKC LCD also provides completely digital control over the brightness and contrast, doing away with trim pots for contrast adjustment, and providing backlight settings beyond just "ON" and "OFF".
+While not very mainstream, the **[Longtech & NKC Electronics Serial LCD display module](http://media.nkcelectronics.com/datasheet/LCM2004SD-NSA-FBW.pdf)** boasts a myriad of features over and above the generic **PCF8574** and **MCP23017** I2C backpacks typically used to simplify 4-bit & 8-bit LCD connections, such as the capability to command the display not just via I2C but also over RS232 (with just a single wire), as well as over an everyday SPI bus. This NKC LCD also provides completely digital control over the brightness and contrast, doing away with trim pots for contrast adjustment, and providing backlight settings beyond just "ON" and "OFF".
 
-But the bragging rights go beyond the mere NKC display itself. This **LiquidCrystal NKC** library is built to work with the same commands as the **LiquidCrystal** and **LiquidCrystal I2C** libraries, but it also retains alias commands to remain compatible with the original **SerialLCD** library. So little to no code will require rewriting or reworking.
+But the bragging rights go beyond the mere NKC display itself. This **LiquidCrystal NKC** library, designed by professional engineering scientist and developer of the groundbreaking Neo Leaf load control system, **[Dominic Luciano](https://www.github.com/domiluci)**, is built to work with the same commands as the **LiquidCrystal** and **LiquidCrystal I2C** libraries, but it also retains alias commands to remain compatible with the original **SerialLCD** library. So little to no code will require rewriting or reworking.
 
 However, many extensions to the basic commands were integrated into this **LiquidCrystal NKC** library. And there are many future additions and expansions planned, so make sure to keep your **LiquidCrystal NKC** library up-to-date to take advantage of all those features!
 
-**NOTE:** This is currently a beta release. As such, some features are still being developed and perfected, and therefore may not work properly or as expected. Please make sure to post and report all bugs on the official GitHub repository, located at: https://www.github.com/domiluci/LiquidCrystal_NKC. Thanks!
+**NOTE:** This is currently a *"Version 0"* beta release. As such, some features are still being developed and perfected, and therefore may not work properly or as expected. Please make sure to post and report all bugs on the [official GitHub repository](https://www.github.com/domiluci/LiquidCrystal_NKC). Thanks!
+
+### LICENSE
+
+The **LiquidCrystal NKC** library, copyright (C) 2021-2022 Dominic M. Luciano & Nox Labs, is licensed under the **[GNU Lesser General Public License v3.0 (GNU LGPLv3)](https://www.gnu.org/licenses/lgpl-3.0)**, and as such is free for all to use for any purpose, inluding commercial and for profit use. However, it is humbly asked that the original source code, copyright information, and license be disclosed and included in all derivative works, and that all changes made over and above the original source code be documented and disclosed in those derivative works. In short, it would just mean a lot if credit was given when using the **LiquidCrystal NKC** library for Arduino IDE as word-of-mouth is the only way people will ever know this library exists for their use. Thank you all so very much!
 
 ## INSTALLATION
 
 ### ARDUINO
 
 * **Arduino Library Manager**: 
-	* The **LiquidCrystal NKC** library has been submitted to Arduino for approval, so this option will be available soon!
+	* Open your copy of the [Arduino IDE](https://www.arduino.cc/en/software). Go to **Sketch > Include Library > Manage Libraries**
+	* Search for **LiquidCrystal NKC** and click **Install**
+	* It's that easy! See the following information for instructions on how to include and use **LiquidCrystal NKC**.
 * **Arduino ZIP Installation**:
-	* Download the **[Latest ZIP Release](https://github.com/domiluci/LiquidCrystal_NKC/releases)** of the **LiquidCrystal NKC** library (currently **[v0.21.302](https://github.com/domiluci/LiquidCrystal_NKC/archive/refs/tags/v0.21.302.zip)**).
+	* Download the **[Latest ZIP Release](https://github.com/domiluci/LiquidCrystal_NKC/releases)** of the **LiquidCrystal NKC** library.
 	* Open your copy of the [Arduino IDE](https://www.arduino.cc/en/software). On the toolbar, click **Sketch > Include Library > Add .ZIP Library**
 	* In the explorer window, navigate to the **LiquidCrystal NKC** ZIP file you just downloaded and select it.
 	* You're all set! See the following information for instructions on how to include and use **LiquidCrystal NKC**.
@@ -33,15 +41,35 @@ However, many extensions to the basic commands were integrated into this **Liqui
 ### MANUAL
 
 * **Manual Installation**:
-	* Download the **[Latest ZIP Release](https://github.com/domiluci/LiquidCrystal_NKC/releases)** of the **LiquidCrystal NKC** library (currently **[v0.21.302](https://github.com/domiluci/LiquidCrystal_NKC/archive/refs/tags/v0.21.302.zip)**).
+	* Download the **[Latest ZIP Release](https://github.com/domiluci/LiquidCrystal_NKC/releases)** of the **LiquidCrystal NKC** library.
 	* Extract the files of that ZIP archive somewhere that's easily accessible. You'll be moving them in a moment.
 	* Open your Arduino **"libraries"** folder in **Windows Explorer**, OSX's **Finder**, or other file explorer
 	* Once there, make a new folder in **"libraries"** specifically called **"LiquidCrystal_NKC"** and open it up.
 	* Copy all of the files you extracted from the ZIP archive into that **"LiquidCrystal_NKC"** folder you just made.
 	* The **LiquidCrystal NKC** library should automatically register with the Arduino IDE on next start or restart
 
-## GENERAL USAGE
+## GENERAL USE
 
+### CONNECTIONS
+
+* **I2C LCD Connection to Arduino Uno/Nano**
+	* LCD Pin 2 [VSS] -> Arduino GND
+	* LCD Pin 3 [VDD] -> Arduino +5V
+	* LCD Pin 7 [SCL] -> Arduino A5 [SCL]
+	* LCD Pin 8 [SDA] -> Arduino A4 [SDA]
+	
+* **RS232 LCD Connection to Arduino Uno/Nano**
+	* LCD Pin 1 [RXD] -> Arduino D1 [TXD]
+	* LCD Pin 2 [VSS] -> Arduino GND
+	* LCD Pin 3 [VDD] -> Arduino +5V
+* **SPI LCD Connection to Arduino Uno/Nano**
+	* LCD Pin 2 [VSS] -> Arduino GND
+	* LCD Pin 3 [VDD] -> Arduino +5V
+	* LCD Pin 5 [SPISS] -> Arduino D10 [SS or CS]
+	* LCD Pin 6 [SDO] -> Arduino D11 [MOSI]
+	* LCD Pin 7 [SCK] -> Arduino D13 [SCK]
+	* LCD Pin 8 [SDI] -> Arduino D12 [MISO]
+	
 ### INCLUDE
 
 Including **LiquidCrystal NKC** in an Arduino sketch:
@@ -59,6 +87,7 @@ Ex: `LC_NKC lcd(RS232, 9600, 20, 4);`
 
 ### COMMANDS
 * **LiquidCrystal Compatible Commands:**
+	* Send a direct HD47780 command: `.command(value)`
 	* Initialize the LCD module: `.init()` or `.begin()`
 	* Turn the display ON/OFF: `.display()` or `.noDisplay`
 	* Turn the backlight ON/OFF: `.backlight()` or `.noBacklight()`
@@ -118,9 +147,12 @@ As for this **LiquidCrystal NKC** library, it will continue to be updated and ma
 
 ## DONATIONS
 
-The **LiquidCrystal NKC** library and associated support will *always* be free of charge and readily available to all. But finances are a crucial necessity for the maintenance and upkeep of this library, and those finances come 100% in the form of donations from the community. So, if it isn't too much to ask, please consider donating to support this work and help it grow and blossom into something great! It doesn't need to be much. Maybe enough for a cup of coffee, or even some leftover change from the living room couch cushions. Every little bit helps, and it will *always* be appreciated more than words can express!
+The **LiquidCrystal NKC** library and associated support will *always* be free of charge and readily available to all, no matter what may come. But finances are a crucial necessity for the maintenance and upkeep of this library, and those finances come 100% in the form of donations from the community. So, if it isn't too much to ask, please consider donating to support this work and help it grow and blossom into something great! It doesn't need to be much. Maybe enough for a cup of coffee, or even some leftover change from the living room couch cushions. Every little bit helps, and it will *always* be appreciated more than words can express!
 
-* **BTC Donations Can Be Sent To: *1DCXaqhH595MKewoymTDHqpuCxkp7ZGQ4F***
+* **Bitcoin (BTC) Donations Can Be Sent To: *35BY9KNc1TASpqduMuqcgfGo6YCm5co27y*** **([QR Code](https://i.ibb.co/QQ4hSnN/CA-BTC-DL.png))**
+* **Bitcoin Cash (BCH) Donations Can Be Sent To: *qq0t955cudgk4w0fuykys3008wfms5xkwyurkfqwtn*** **([QR Code](https://i.ibb.co/DW9gXPN/BP-BCH-DL.png))**
+* **Litecoin (LTC) Donations Can Be Sent To: *ltc1qzk32fz5020yd36n72kz5vqckup0pka6x8s8fsf*** **([QR Code](https://i.ibb.co/G2y9GXh/BP-LTC-DL.png))**
+* **Ethereum (ETH) Donations Can Be Sent To: *0x6F798f6EdAC45fEC1c3B3195EFBC741B210b4CCb*** **([QR Code](https://i.ibb.co/wrbMGZN/BP-ETH-DL.png))**
 
 ##
 

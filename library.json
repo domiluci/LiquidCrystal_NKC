@@ -1,6 +1,6 @@
 {
   "name": "LiquidCrystal_NKC",
-  "keywords": "LCD, liquidcrystal, NKC, LCD, I2C, RS232, SPI",
+  "keywords": "LCD, liquidcrystal, NKC, serial, wire, I2C, RS232, SPI",
   "description": "A LiquidCrystal library for Longtech & NKC Electronics I2C/RS232/SPI LCD displays",
   "repository":
   {
