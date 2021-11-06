@@ -1,7 +1,7 @@
 # LiquidCrystal NKC for Arduino IDE
 
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/domiluci/LiquidCrystal_NKC?label=Release&display_name=tag&include_prereleases)](https://github.com/domiluci/LiquidCrystal_NKC/releases)
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![GitHub](https://img.shields.io/github/license/domiluci/LiquidCrystal_NKC?label=License)](https://github.com/domiluci/LiquidCrystal_NKC/blob/main/LICENSE)
 [![Arduino 2.0](https://img.shields.io/badge/Arduino%202.0-Ready-brightgreen)](https://www.arduino.cc/en/software#experimental-software)
 [![Donate](https://img.shields.io/badge/Donate-BTC-f7931a?logo=bitcoin)](https://i.ibb.co/QQ4hSnN/CA-BTC-DL.png)
 [![Donate](https://img.shields.io/badge/Donate-BCH-0ac18e?logo=bitcoincash)](https://i.ibb.co/DW9gXPN/BP-BCH-DL.png)
@@ -149,10 +149,10 @@ As for this **LiquidCrystal NKC** library, it will continue to be updated and ma
 
 The **LiquidCrystal NKC** library and associated support will *always* be free of charge and readily available to all, no matter what may come. But finances are a crucial necessity for the maintenance and upkeep of this library, and those finances come 100% in the form of donations from the community. So, if it isn't too much to ask, please consider donating to support this work and help it grow and blossom into something great! It doesn't need to be much. Maybe enough for a cup of coffee, or even some leftover change from the living room couch cushions. Every little bit helps, and it will *always* be appreciated more than words can express!
 
-* **Bitcoin (BTC) Donations Can Be Sent To: *35BY9KNc1TASpqduMuqcgfGo6YCm5co27y*** **([QR Code](https://i.ibb.co/QQ4hSnN/CA-BTC-DL.png))**
-* **Bitcoin Cash (BCH) Donations Can Be Sent To: *qq0t955cudgk4w0fuykys3008wfms5xkwyurkfqwtn*** **([QR Code](https://i.ibb.co/DW9gXPN/BP-BCH-DL.png))**
-* **Litecoin (LTC) Donations Can Be Sent To: *ltc1qzk32fz5020yd36n72kz5vqckup0pka6x8s8fsf*** **([QR Code](https://i.ibb.co/G2y9GXh/BP-LTC-DL.png))**
-* **Ethereum (ETH) Donations Can Be Sent To: *0x6F798f6EdAC45fEC1c3B3195EFBC741B210b4CCb*** **([QR Code](https://i.ibb.co/wrbMGZN/BP-ETH-DL.png))**
+* **Bitcoin (BTC) Donations Can Be Sent To: *35BY9KNc1TASpqduMuqcgfGo6YCm5co27y*** **([QR](https://i.ibb.co/QQ4hSnN/CA-BTC-DL.png))**
+* **Bitcoin Cash (BCH) Donations Can Be Sent To: *qq0t955cudgk4w0fuykys3008wfms5xkwyurkfqwtn*** **([QR](https://i.ibb.co/DW9gXPN/BP-BCH-DL.png))**
+* **Litecoin (LTC) Donations Can Be Sent To: *ltc1qzk32fz5020yd36n72kz5vqckup0pka6x8s8fsf*** **([QR](https://i.ibb.co/G2y9GXh/BP-LTC-DL.png))**
+* **Ethereum (ETH) Donations Can Be Sent To: *0x6F798f6EdAC45fEC1c3B3195EFBC741B210b4CCb*** **([QR](https://i.ibb.co/wrbMGZN/BP-ETH-DL.png))**
 
 ##
 
