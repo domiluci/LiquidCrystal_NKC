@@ -1,7 +1,7 @@
 // OVERVIEW //////////////////////////////////////
 // LiquidCrystal NKC: Library for Arduino
 // Full Arduino IDE Demonstration Sketch
-// Sketch v21.302 by Dominic M. Luciano
+// Sketch v21.316 by Dominic M. Luciano
 //
 // This sketch is intended to highlight & display
 // the major functions of the LiquidCrystal NKC
@@ -41,24 +41,23 @@ byte heart[8] = {
 };
 
 void setup() {
-  
+
   // Initialize LCD Module
-  lcd.init();
-  
+  lcd.begin();
+
   // Turn On LCD Backlight
   lcd.backlight();
-  // Or Use: lcd.setBacklight(HIGH);  
-  
-  // Create New Character From Earlier Byte Array
-  // We'll Use This Later On
-  lcd.createChar(0, heart);
+  // Or Use: lcd.setBacklight(HIGH);
 
+  // Create New Character From Earlier Byte Array
+  // We'll Use This Later On...
+  lcd.createChar(0, heart);
 }
 
 void loop() {
-  
+
   // Set Cursor to "Col 0, Row 0" (1st Col, 1st Row)
-  lcd.home(); // Or Use: lcd.setCursor(0, 0);
+  lcd.home();  // Or Use: lcd.setCursor(0, 0);
 
   // Clear The Entire LCD
   lcd.clear();
@@ -88,24 +87,24 @@ void loop() {
 
   // Clear Entire LCD
   lcd.clear();
-  delay(250);  
-  
+  delay(250);
+
   // Set Cursor Back to "0, 0"
-  lcd.home();  
+  lcd.home();
 
   // Print Some Text...
   lcd.print("LiquidCrystal NKC");
-  
+
   // Set Cursor To "Col 0, Row 1" (1st Col, 2nd Row)
   lcd.setCursor(0, 1);
   lcd.print("By Dominic Luciano");
   delay(2000);
-  
+
   // Set Cursor To "Col 0, Row 2" (1st Col, 3rd Row)
   lcd.setCursor(0, 2);
   lcd.print("GitHub.com/DomiLuci");
-  delay(2000);  
-    
+  delay(2000);
+
   // Set Cursor To "0, 2"
   lcd.setCursor(0, 3);
 
@@ -113,32 +112,32 @@ void loop() {
   lcd.blink();
   // or use: lcd.blinkOn();
   // or use: lcd.blink(true);
-  
+
   // And For My Next Trick...
   // Making Text Appear Behind A Blinking Cursor
   for (byte i = 0; i <= 18; i++) {
-    // Print Each Letter of the String At Index "i"      
+    // Print Each Letter of the String At Index "i"
     lcd.print(String(ChangingToday.charAt(i)));
     // Cursor Must Be Reset After Each Letter to Col "i"
     lcd.setCursor(i, 3);
-    // Move the Blinking Cursor One Spot Right Every 100ms   
+    // Move the Blinking Cursor One Spot Right Every 100ms
     lcd.right();
     delay(100);
-  }  
+  }
   delay(1000);
-  
-  // Making Text Appear Behind A Blinking Cursor  
+
+  // Making Text Appear Behind A Blinking Cursor
   // ...In Reverse
   for (byte i = 19; i <= 19; i--) {
-    // Print Each Letter of the String At Index "i"      
+    // Print Each Letter of the String At Index "i"
     lcd.print(String(EvolvingTomorrow.charAt(i)));
     // Cursor Must Be Reset After Each Letter to Col "i"
     lcd.setCursor(i, 3);
-    // Move the Blinking Cursor One Spot Left Every 100ms   
+    // Move the Blinking Cursor One Spot Left Every 100ms
     lcd.left();
     delay(100);
   }
-    
+
   //Turn LCD Blinking Cursor Off
   lcd.noBlink();
   // Or Use: lcd.blinkOff();
@@ -147,25 +146,25 @@ void loop() {
 
   // Drop the Contrast to "0"
   lcd.setContrast(0);
-  
+
   // Clear Rows 0, 1, 2, and 3 (1st, 2nd, 3rd, and 4th Row)
   lcd.clear(0);
   lcd.clear(1);
   lcd.clear(2);
   lcd.clear(3);
-  // Reset Cursor to "0, 3"  
+  // Reset Cursor to "0, 3"
   lcd.setCursor(2, 1);
   // Print "Now Let's Scroll"
   lcd.print("Now Let's Scroll");
 
-  // Fade The Contrast In...
-  for (byte i = 0; i <= 40; i++) {
+  // Fade The Contrast Back In To 200...
+  for (byte i = 0; i <= 200; i++) {
     // Set Contrast to "i"
     lcd.setContrast(i);
-    delay(100);
+    delay(15);
   }
   delay(2000);
-  
+
   // Set Cursor to "20, 1" (21st Column of 2nd Row, Sort Of)
   lcd.setCursor(20, 1);
   // Shift ALL Text Left 2 Positions, Once Every 100ms...
@@ -173,8 +172,8 @@ void loop() {
   lcd.scrollDisplayLeft(1, 100);
   // Or Use: lcd.shiftLeft(14, 100);
   delay(250);
-  
-  byte col = 21; // Variable For Next Loop
+
+  byte col = 21;  // Variable For Next Loop
   // Now Shift ALL Text Right 20 Positions, Once Every 100ms...
   // The Harder Way
   for (byte i = 0; i <= 20; i++) {
@@ -182,11 +181,12 @@ void loop() {
     lcd.scrollDisplayRight();
     // Or Use: shiftRight();
     // Clear Each Character Before It Re-enters Frame
-    lcd.clear(col, 1);  col--;
+    lcd.clear(col, 1);
+    col--;
   }
   delay(2000);
-  
-  // Clear The Entire LCD... 
+
+  // Clear The Entire LCD...
   // Also Resetting The LCD Shift
   lcd.clear();
 
@@ -194,11 +194,11 @@ void loop() {
   lcd.setCursor(3, 1);
   // Print Some Thank You Text
   lcd.print("Thanks 4 The ");
-  // Show That Heart We Made Earlier  
+  // Show That Heart We Made Earlier
   lcd.write((byte)0);
   delay(2000);
-  
+
   //Clean Up The Entire LCD Before Loop Reset
   lcd.clear();
-  delay(1500);  
+  delay(1500);
 }

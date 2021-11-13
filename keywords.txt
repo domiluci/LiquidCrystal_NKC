@@ -21,6 +21,8 @@ on	KEYWORD2
 off	KEYWORD2
 display	KEYWORD2
 noDisplay	KEYWORD2
+displayOn	KEYWORD2
+displayOff	KEYWORD2
 begin	KEYWORD2
 init	KEYWORD2
 backlight	KEYWORD2

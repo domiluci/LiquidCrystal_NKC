@@ -88,7 +88,7 @@ Ex: `LC_NKC lcd(RS232, 9600, 20, 4);`
 ### COMMANDS
 * **LiquidCrystal Compatible Commands:**
 	* Send a direct HD47780 command: `.command(value)`
-	* Initialize the LCD module: `.init()` or `.begin()`
+	* Initialize the LCD module: `.begin()` or `.init()`
 	* Turn the display ON/OFF: `.display()` or `.noDisplay`
 	* Turn the backlight ON/OFF: `.backlight()` or `.noBacklight()`
 	* Clear the entire display: `.clear()`
@@ -101,16 +101,24 @@ Ex: `LC_NKC lcd(RS232, 9600, 20, 4);`
 	* Blinking Cursor ON/OFF: `.blink()` and `.noBlink()`
 	* Shift entire display LEFT: `.scrollDisplayLeft()`
 	* Shift entire display RIGHT: `.scrollDisplayRight()`
+	
+* **LCD API 1.0 Compatible Commands**
+	* Send a direct HD47780 command: `.command(value)`
+	* Turn the pixels/backlight ON/OFF: `.on()` or `.off()`
+	* Initialize the LCD module: `.init()`
+	* Set backlight brightness: `.setBacklight(0 to 255)`
+	* Set the display's contrast: `.setContrast(0 to 255)` *(Default = 200)*
+	* Clear the entire display: `.clear()`
+	* Write to the LCD display: `.write()`
+	* Print a char or string:  `.print()`
+	* Deprecated print command: `.printstr()`
 
 * **Alias and Other Commands:**
-	* Turn the display ON/OFF: `.on()` or `.off()`
-	* Turn the backlight ON/OFF: `.setBacklight(HIGH or LOW)`
-	* Set backlight brightness: `.setBacklightBrightness(1 to 8)`
-	* Set the display's contrast: `.setContrast(1 to 50)`
+	* Turn display's pixels ON/OFF: `.displayOn()` and `.displayOff()`
+	* Set backlight brightness: `.setBacklightBrightness(0 to 255)`
 	* Clear a single character: `.clear(column, row)`
 	* Clear several characters: `.clear(start column, end column, row)`
 	* Clear an entire line/row: `.clear(row)`
-	* Deprecated print command: `.printstr()`
 	* Set cursor visibility: `.cursorOn()` and `.cursorOff()`
 	* Blinking cursor ON/OFF: `.blinkOn()` and `.blinkOff()`
 	* Blinking cursor ON/OFF: `.blink(true)` and `.blink(false)`
@@ -141,9 +149,15 @@ The **Full Demo** sketch builds on the basics of the **Hello World** sketch whil
 
 ## WHAT'S NEXT
 
+### SHORT TERM
+
+One of the biggest goals of the **LiquidCrystal NKC** library for the Arduino IDE is to be as compatible as possible with existing libraries, such as with the **LiquidCrystal** and **SerialLCD** parent libraries that **LiquidCrystal NKC** was born from. So to expand on that compatibility even more so that users migrating from other libraries can simply "plug-n-play", **LiquidCrystal NKC** is in the process of being made as [**LCD API 1.0**](https://playground.arduino.cc/Code/LCDAPI/) compliant as possible. This means less hassle when switching from one display and library to the **LiquidCrystal NKC** and **NKC Electronics** serial LCD display module, and less rewriting and redesigning to switch back, not that you'll want to, *of course*! So make sure to keep your copy of **LiquidCrystal NKC** up-to-date to capitalize on all the features being added each Friday these coming weeks, especially while all the kinks are getting ironed out in this "Version 0" release.
+
+### LONG TERM
+
 Currently, an expanded **LiquidCrystal** library is in development that will combine support for all LCD displays, including this NKC Serial LCD display. A universal LCD library will not only make it easier to switch between different LCD displays while eliminating time wasted on reconfiguring and recoding projects, but it will also create a standardized set of commands for all LCD displays of all interface types. Not to mention expand on all current commands, providing easier, simpler functionality with more power and flexibility, all while requiring less code to implement and execute, especially for advanced commands.
 
-As for this **LiquidCrystal NKC** library, it will continue to be updated and maintained, even after completion of the expanded **LiquidCrystal** library. More additions will be coming soon. So make sure you keep your copy of the **LiquidCrystal NKC** library up-to-date to score on all those fresh features ASAP. And stay tuned to the other repositories for the all new, all universal **LiquidCrystal** library coming soon!
+As for this **LiquidCrystal NKC** library, it will continue to be updated and maintained, even after completion of the expanded **LiquidCrystal** library. More additions will be coming soon. So make sure you keep your copy of the **LiquidCrystal NKC** library up-to-date to score on all those fresh features. And stay tuned to the other [repositories](https://github.com/domiluci?tab=repositories) for the all new, all universal **LiquidCrystal** library coming soon!
 
 ## DONATIONS
 

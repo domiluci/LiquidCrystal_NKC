@@ -1,7 +1,7 @@
 // OVERVIEW //////////////////////////////////////
 // LiquidCrystal NKC: Library for Arduino
 // "Hello, World!" Arduino IDE Demo Sketch
-// Sketch v21.302 by Dominic M. Luciano
+// Sketch v21.316 by Dominic M. Luciano
 //
 // This sketch is intended to highlight & display
 // the major functions of the LiquidCrystal NKC
@@ -27,7 +27,7 @@ LC_NKC lcd(I2C, 0x28, 20, 4);
 void setup() {
   
   // Initialize LCD Module
-  lcd.init();
+  lcd.begin();
   
   // Turn On LCD Backlight
   lcd.backlight();
