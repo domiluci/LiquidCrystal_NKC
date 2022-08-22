@@ -132,8 +132,8 @@ void spitransfer(unsigned char var) {
 void sendcommand(unsigned char command) {
   switch (g_interface) {
     case RS232:
-      Serial.write(0xFE);
-      Serial.write(command);
+      Serial1.write(0xFE);
+      Serial1.write(command);
       delayMicroseconds(RS232DELAY);
       break;
     case I2C:
@@ -156,9 +156,9 @@ void sendcommand(unsigned char command) {
 void sendcommand2(unsigned char command, unsigned char value) {
   switch (g_interface) {
     case RS232:
-      Serial.write(0xFE);
-      Serial.write(command);
-      Serial.write(value);
+      Serial1.write(0xFE);
+      Serial1.write(command);
+      Serial1.write(value);
       delayMicroseconds(RS232DELAY);
       break;
     case I2C:
@@ -271,7 +271,7 @@ void LC_NKC::begin() {
   delay(500);
   switch (g_interface) {
     case RS232:
-      Serial.begin(g_baudrate);
+      Serial1.begin(g_baudrate);
       break;
     case I2C:
       Wire.begin();
@@ -332,7 +332,7 @@ void LC_NKC::setContrast(uint8_t new_val) {
 size_t LC_NKC::write(uint8_t value) {
   switch (g_interface) {
     case RS232:
-      Serial.write(value);
+      Serial1.write(value);
       break;
     case I2C:
       Wire.beginTransmission(g_i2c_address);
@@ -352,10 +352,10 @@ void LC_NKC::createChar(unsigned char char_num, unsigned char *rows) {
 
   switch (g_interface) {
     case RS232:
-      Serial.write(0xFE);
-      Serial.write(LOADCUSTOMCHAR);
-      Serial.write(char_num);
-      Serial.write(rows, CUSTOM_CHAR_SIZE);
+      Serial1.write(0xFE);
+      Serial1.write(LOADCUSTOMCHAR);
+      Serial1.write(char_num);
+      Serial1.write(rows, CUSTOM_CHAR_SIZE);
       delayMicroseconds(RS232DELAY);
       break;
     case I2C:
@@ -391,7 +391,7 @@ void LC_NKC::print(const String inputStr) {
   switch (g_interface) {
     case RS232:
       for (uint8_t i = 0; i < len; i++) {
-        Serial.write(inputStr.charAt(i));
+        Serial1.write(inputStr.charAt(i));
       }
       break;
     case I2C:
@@ -417,7 +417,7 @@ void LC_NKC::print(const char inputChar[]) {
   switch (g_interface) {
     case RS232:
       while (len--)
-        Serial.write(*inputChar++);
+        Serial1.write(*inputChar++);
       break;
     case I2C:
       Wire.beginTransmission(g_i2c_address);
